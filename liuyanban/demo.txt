@@ -1,0 +1,42 @@
+------------留言板-----------------
+
+连接数据库
+
+功能：
+
+1：发表文章、修改文章、删除文章、查找文章、分类、评论、访问量、私信、搜索
+2：登录 注册 上传头像 修改密码
+3：点赞、收藏、分享、转发、关注
+4：置顶
+
+
+Mysql数据库（关系型数据库） 主外键关联  
+
+
+一个表只能有一个主键（自增长\not null）、多个外键
+
+
+
+Database(库)--->Table(表)--->字段-列名(名字、类型、大小)--->数据
+
+blog(bid,title,time,content,hits)
+
+列名类型（int char(8) varchar(8) text date datetime timestamp blob）
+
+
+如何拼写SQL语句
+
+1.增insert
+	insert into 表名(列名,列名....) values(值,值....)
+
+2.删delete
+	delete from 表名 where bid=1
+
+3.改update
+	update 表名 set 列名=值,列名=值 where bid='$bid'
+
+4.查select
+	select * from blog  /  select * from blog where 1
+	select count(*) from blog      ---> 输入库的总长度
+	select * from blog limit 3
+	select * from blog where bid='$bid'
